@@ -1,5 +1,6 @@
 package testcases;
 
+import POJOs.CharacterPOJO;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -31,4 +32,25 @@ public class TheBreakingBadAPITest extends BaseTest{
         //getting Walter White birthday atribute
        System.out.println(jsonData.getString("name")+" birthday "+jsonData.getString("birthday"));
     }
+
+    @Test
+    public void givenAllCharactersInformationThenStorePOJOAndPrint(){
+
+        response = given()
+                    .when()
+                        .get("/characters")
+                    .then()
+                        .statusCode(200)
+                        .extract().response();
+
+        jsonData = response.getBody().jsonPath();
+
+        CharacterPOJO[] characterPOJO = jsonData.getObject("", CharacterPOJO[].class);
+
+        for(int i=0; i < characterPOJO.length; i++){
+
+            characterPOJO[i].showCharacterInformation();
+        }
+    }
+
 }

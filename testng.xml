@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Your Logo Page Test Suite">
-    <test name="Adding item to shopping cart">
+<suite name="Breaking Bad API! Test Suite">
+    <test name="Getting Walter White information and showing his birthday">
         <!--Walter White ID parameter -->
         <parameter name="character" value="1"/>
         <parameter name="characterExpected" value="[walter white]"/>
@@ -14,4 +14,15 @@
             </class>
         </classes>
     </test>
+
+    <test name="Getting all characters information, save into POJO object and print them">
+        <classes>
+            <class name="testcases.TheBreakingBadAPITest">
+                <methods>
+                    <include name="givenAllCharactersInformationThenStorePOJOAndPrint"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 </suite>
