@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Your Logo Page Test Suite">
+    <test name="Adding item to shopping cart">
+        <!--Walter White ID parameter -->
+        <parameter name="character" value="1"/>
+        <parameter name="characterExpected" value="[walter white]"/>
+        <classes>
+            <class name="testcases.TheBreakingBadAPITest">
+                <methods>
+                    <include name="givenWalterWhiteInformationThenGetHisBirthday"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
