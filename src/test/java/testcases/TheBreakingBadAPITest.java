@@ -47,10 +47,10 @@ public class TheBreakingBadAPITest extends BaseTest{
 
         CharacterPOJO[] characterPOJO = jsonData.getObject("", CharacterPOJO[].class);
 
-        for(int i=0; i < characterPOJO.length; i++){
+            for(int i=0; i < characterPOJO.length; i++){
 
-            characterPOJO[i].showCharacterInformation();
-        }
+                characterPOJO[i].showCharacterInformation();
+            }
     }
 
 }
