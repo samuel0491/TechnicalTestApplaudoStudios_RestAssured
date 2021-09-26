@@ -21,9 +21,10 @@ public class TheBreakingBadAPITest extends BaseTest{
 
         jsonData = response.jsonPath();
         //
-        Assert.assertEquals(jsonData.getString("name").toUpperCase(),
-                characterExpected.toUpperCase(),
-                "Character isn't "+characterExpected);
+        Assert.assertEquals(jsonData.getString("name")
+                                        .toUpperCase(),
+                            characterExpected.toUpperCase(),
+                                    "Character isn't "+characterExpected);
         //getting Walter White information
         //System.out.println(jsonData.get().toString());
         //System.out.println(jsonData.getString("birthday"));
