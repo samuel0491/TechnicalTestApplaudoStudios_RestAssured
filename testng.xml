@@ -14,7 +14,7 @@
             </class>
         </classes>
     </test>
-
+    <!---->
     <test name="Getting all characters information, save into POJO object and print them">
         <classes>
             <class name="testcases.TheBreakingBadAPITest">
