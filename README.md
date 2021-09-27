@@ -29,4 +29,4 @@ and then, I created a class that represent a Character object returned by the AP
 
 ![run suite](https://user-images.githubusercontent.com/13719381/134827619-599399b5-60be-49a0-8297-3c1da2a5a385.JPG)
 
-
+**For this project, I used IntelliJ IDE, so when you clone this project and open it using IntelliJ, every dependencies should be downloaded automatically.**
