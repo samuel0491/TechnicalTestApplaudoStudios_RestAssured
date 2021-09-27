@@ -4,6 +4,9 @@ import POJOs.CharacterPOJO;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
+
 import static io.restassured.RestAssured.given;
 
 public class TheBreakingBadAPITest extends BaseTest{
@@ -47,8 +50,10 @@ public class TheBreakingBadAPITest extends BaseTest{
 
         CharacterPOJO[] characterPOJO = jsonData.getObject("", CharacterPOJO[].class);
 
-            for(int i=0; i < characterPOJO.length; i++){
+            Assert.assertTrue(characterPOJO.length > 0,
+                    "Characters don't retrieved");
 
+            for(int i=0; i < characterPOJO.length; i++){
                 characterPOJO[i].showCharacterInformation();
             }
     }

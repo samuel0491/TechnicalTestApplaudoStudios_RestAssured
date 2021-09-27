@@ -44,4 +44,8 @@ public class CharacterPOJO {
         System.out.println("Portrayed: "+portrayed);
         System.out.println("------------------------------\n");
     }
+
+    public int getChar_id(){
+        return char_id;
+    }
 }
